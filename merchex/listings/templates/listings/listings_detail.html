@@ -1,0 +1,11 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+<h2>{{ listing.description }}</h2>
+
+<li>Sold: {{ listing.active | yesno }}</li>
+<li>Année: {{ listing.year }}</li>
+<li>Type d'article: {{ listing.get_type_display }}</li>
+<li>Groupe: </li>
+
+{% endblock %}
